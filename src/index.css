@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #03045e 0%, #023e8a 25%, #0077b6 50%, #0096c7 75%, #00b4d8 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #023e8a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0077b6;
+}
+
+/* Leaflet map customization */
+.leaflet-container {
+  background: #0096c7 !important;
+}
+
+/* Custom marker styling */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Leaflet controls styling for dark theme */
+.leaflet-control-zoom a {
+  background-color: rgba(0, 150, 199, 0.8) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: rgba(2, 62, 138, 0.8) !important;
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Enhanced Typography and Animations */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body, input, button, textarea, select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Smooth text rendering */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E5E7EB 50%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced global transitions - optimized for performance */
+*:not(.no-transition) {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interactive elements smooth transitions */
+button, a, .interactive {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Enhanced backdrop blur for better text readability */
+.backdrop-blur-enhanced {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Enhanced shadow and glow effects */
+.shadow-glow {
+  box-shadow: 0 0 40px rgba(72, 202, 228, 0.3), 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-glow-hover {
+  box-shadow: 0 0 60px rgba(72, 202, 228, 0.4), 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.glow-border {
+  border: 1px solid rgba(72, 202, 228, 0.3);
+  box-shadow: 0 0 20px rgba(72, 202, 228, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.glow-border-hover {
+  border: 1px solid rgba(72, 202, 228, 0.6);
+  box-shadow: 0 0 30px rgba(72, 202, 228, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Animated gradient background for enhanced visual appeal */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Pulse animation for status indicators */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced text contrast on dark backgrounds */
+.text-enhanced {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Card hover effects */
+.card-hover {
+  transform: translateY(0px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(72, 202, 228, 0.3), 0 0 0 1px rgba(72, 202, 228, 0.1);
+}
+
+/* Button hover effects */
+.btn-glow {
+  background: linear-gradient(135deg, rgba(0, 119, 182, 0.8) 0%, rgba(0, 180, 216, 0.8) 100%);
+  border: 1px solid rgba(72, 202, 228, 0.4);
+  box-shadow: 0 4px 15px rgba(72, 202, 228, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  background: linear-gradient(135deg, rgba(0, 119, 182, 1) 0%, rgba(0, 180, 216, 1) 100%);
+  border: 1px solid rgba(72, 202, 228, 0.8);
+  box-shadow: 0 8px 25px rgba(72, 202, 228, 0.4), 0 0 0 1px rgba(72, 202, 228, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Pulse animation for status indicators */
+@keyframes pulse-glow-enhanced {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(72, 202, 228, 0.4);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(72, 202, 228, 0.6);
+  }
+}
+
+.pulse-glow-enhanced {
+  animation: pulse-glow-enhanced 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(72, 202, 228, 0.2), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Glass morphism effect */
+.glass-morphism {
+  background: rgba(144, 224, 239, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.glass-morphism-hover:hover {
+  background: rgba(144, 224, 239, 0.12);
+  border: 1px solid rgba(72, 202, 228, 0.2);
+  box-shadow: 0 12px 40px rgba(72, 202, 228, 0.1);
+}
+
+/* Text glow effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(72, 202, 228, 0.5), 0 0 20px rgba(72, 202, 228, 0.3);
+}
+
+.text-glow-hover:hover {
+  text-shadow: 0 0 15px rgba(72, 202, 228, 0.7), 0 0 30px rgba(72, 202, 228, 0.5);
+}
+
+/* Improved focus states for better accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid rgba(72, 202, 228, 0.6);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(72, 202, 228, 0.2);
+}
+
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

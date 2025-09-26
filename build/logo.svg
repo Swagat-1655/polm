@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main logo shape based on the uploaded image -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Stylized power line/electrical symbol -->
+  <path d="M30 20 L90 20 L70 40 L90 40 L30 100 L50 80 L30 80 Z" fill="url(#logoGradient)" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Power line elements -->
+  <circle cx="25" cy="15" r="3" fill="#60A5FA"/>
+  <circle cx="95" cy="15" r="3" fill="#60A5FA"/>
+  <line x1="25" y1="15" x2="95" y2="15" stroke="#3B82F6" stroke-width="2"/>
+  
+  <!-- Monitoring elements -->
+  <circle cx="60" cy="60" r="8" fill="none" stroke="#1E40AF" stroke-width="2"/>
+  <circle cx="60" cy="60" r="4" fill="#3B82F6"/>
+</svg>

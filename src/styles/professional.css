@@ -1,0 +1,373 @@
+/* Professional UI Enhancements */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+/* Enhanced card hover effects */
+.professional-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.professional-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth focus states */
+.professional-focus:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Enhanced loading states */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Section fade-in animation */
+.fade-in-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Status indicator pulse */
+.status-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Glow effect for important elements */
+.enhanced-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Improved text selection */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: #ffffff;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Enhanced backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .enhanced-backdrop-blur {
+    backdrop-filter: blur(15px) saturate(180%);
+  }
+}
+
+/* Infinite scrolling animations for alerts */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.alerts-scroll-container {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.alerts-scroll-content {
+  animation: scrollUpSlow 20s linear infinite;
+  will-change: transform;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.alerts-scroll-content:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth scroll animation with better timing */
+@keyframes scrollUpSlow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Duplicate content for seamless loop */
+.alerts-duplicate {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+/* Alert fade in animation */
+@keyframes alertFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-item {
+  animation: alertFadeIn 0.5s ease-out;
+}
+
+/* Fade in up animation for IoT content */
+@keyframes fadeInUpContent {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUpContent 0.8s ease-out both;
+  animation-fill-mode: both;
+}
+
+/* Card effect animations for PowerLine Monitor content */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(72, 202, 228, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(72, 202, 228, 0.6), 0 0 30px rgba(72, 202, 228, 0.4);
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1.2s ease-out both;
+  animation-fill-mode: both;
+}
+
+.slide-in-left:hover {
+  animation: textGlow 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* Sequential staggered animations with slower timing */
+.slide-delay-1 { animation-delay: 0.3s; }
+.slide-delay-2 { animation-delay: 0.8s; }
+.slide-delay-3 { animation-delay: 1.3s; }
+.slide-delay-4 { animation-delay: 1.8s; }
+.slide-delay-5 { animation-delay: 2.3s; }
+
+.infinite-scroll-content:hover {
+  animation-play-state: paused;
+}
+
+.infinite-scroll-content:hover .text-paragraph {
+  animation: textGlowHover 2s ease-in-out infinite;
+}
+
+/* Performance optimization for mobile */
+@media (max-width: 768px) {
+  .infinite-scroll-container {
+    height: 350px;
+  }
+  
+  .infinite-scroll-content {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  .infinite-scroll-container {
+    height: 320px;
+  }
+}
+
+/* Transparent text containers */
+.text-container-transparent {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text-container-transparent p,
+.text-container-transparent h3 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .professional-card {
+    transform: none;
+  }
+  
+  .professional-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .alerts-scroll-container {
+    height: 300px;
+  }
+  
+  .alerts-scroll-content {
+    animation-duration: 40s;
+  }
+
+  /* Mobile navbar fixes */
+  .navbar-brand {
+    font-size: 0.875rem;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Fix mobile menu transitions */
+  .mobile-menu-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Extra small screens */
+  .card-slide-up {
+    animation-duration: 0.6s;
+  }
+  
+  .card-delay-1 { animation-delay: 0.1s; }
+  .card-delay-2 { animation-delay: 0.3s; }
+  .card-delay-3 { animation-delay: 0.5s; }
+  .card-delay-4 { animation-delay: 0.7s; }
+}
+
+@media (max-width: 480px) {
+  /* Very small screens */
+  .professional-card {
+    margin: 0.5rem 0;
+  }
+  
+  .loading-shimmer {
+    animation-duration: 1.5s;
+  }
+}
+
+/* Prevent layout shift and improve performance */
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  will-change: transform;
+}
+
+/* Smooth transitions for all interactive elements */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fix for potential animation conflicts */
+.animation-safe {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Performance optimization for mobile */
+@media (max-width: 768px) {
+  .enhanced-glow {
+    animation: none;
+  }
+  
+  .glow {
+    animation: none;
+  }
+  
+  .float {
+    animation: none;
+  }
+  
+  .shimmer {
+    animation-duration: 3s;
+  }
+}
