@@ -111,8 +111,8 @@ npm run dev
 ```
 
 ### 5️⃣ Access the Application  
-- Frontend: http://localhost:5173  
-- Backend API: http://localhost:5000  
+- Frontend: https://polm.vercel.app/  
+- Backend API: https://backend-aiml.onrender.com/  
 
 ---
 
