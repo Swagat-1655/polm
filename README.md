@@ -1,163 +1,145 @@
-# Power Line Monitoring Dashboard
 
-A comprehensive real-time power line monitoring system built with React, Three.js, Chart.js, and Google Maps integration. Features AI-powered predictions and stunning gradient-themed visualizations.
+<h1 align="center">Power Line Monitoring System</h1>
+<p align="center">
+  AI-Powered Real-time Power Grid Monitoring  
+  <br/>
+  Built with Modern Web Technologies 🚀
+</p>
 
-## 🚀 Features
+A **cutting-edge power line monitoring solution** that provides:
+- **Real-time Monitoring** of power line status and metrics
+- **AI-Powered Analytics** for predictive maintenance
+- **Fault Detection & Prevention** using machine learning
+- **Interactive 3D Visualization** of power infrastructure
 
-- **Real-time 3D Visualization**: Interactive current flow animation using Three.js
-- **Live Sensor Monitoring**: Voltage, current, and vibration sensor readings
-- **Interactive Maps**: Google Maps integration with color-coded status pins
-- **Advanced Analytics**: Real-time charts for voltage, current, and fault predictions
-- **AI Predictions**: Machine learning-powered fault prediction and maintenance recommendations
-- **Alert System**: Real-time alerts based on sensor thresholds
-- **Responsive Design**: Beautiful gradient theme with deep blue, emerald green, and white
+---
 
-## 🛠 Tech Stack
+## 🌟 Features  
+- 🔍 **Real-time Monitoring** – Live visualization of power line metrics  
+- 🤖 **AI-Powered Analytics** – Predictive maintenance & fault detection  
+- 🚨 **Instant Alerts** – Real-time notifications for anomalies  
+- 📊 **Interactive Dashboard** – 3D visualization & data charts  
+- 🔄 **IoT Integration** – Seamless sensor data collection  
+- 📱 **Responsive Design** – Works on all devices  
 
-- **Frontend**: React 18, Tailwind CSS
-- **3D Graphics**: Three.js, @react-three/fiber, @react-three/drei
-- **Charts**: Chart.js, react-chartjs-2
-- **Maps**: Google Maps API
-- **HTTP Client**: Axios
-- **Backend**: Node.js, Express (included)
+---
 
-## 📁 Project Structure
+## 🛠️ Tech Stack  
 
-```
-src/
-├── components/
-│   ├── CurrentAnimation.js      # 3D current flow visualization
-│   ├── Charts.js               # Voltage, current, and prediction charts
-│   ├── MapComponent.js         # Google Maps with status pins
-│   ├── SensorReadings.js       # Live sensor data display
-│   ├── AlertsAndPredictions.js # Alert system and AI predictions
-│   └── Dashboard.js            # Main dashboard component
-├── App.js                      # Main app component
-├── index.js                    # React entry point
-└── index.css                   # Tailwind and custom styles
-```
+### 🎨 Frontend – [Frontend Repository](https://github.com/Swagat-1655/polm)  
+- **React.js** – Modern UI components  
+- **Tailwind CSS** – Responsive styling  
+- **Redux Toolkit** – State management  
+- **Three.js** – 3D visualization  
+- **Chart.js** – Data visualization  
+- **Google Maps API** – Location tracking  
 
-## 🚀 Quick Start
+### ⚙️ Backend – [Backend Repository](https://github.com/gouravKJ/backend-AIMl)  
+- **Node.js + Express.js** – REST API & server  
+- **MongoDB** – Database for sensor data  
+- **JWT Authentication** – Secure access  
+- **RESTful APIs** – Data management  
+- **WebSocket** – Real-time updates  
 
-### Prerequisites
-- Node.js (v16 or higher)
+### 🧠 AI/ML Layer  
+- **TensorFlow** – Deep learning models  
+- **scikit-learn** – Machine learning algorithms  
+- **Pandas + NumPy** – Data processing  
+- **Flask API** – Model serving  
+- **Random Forest** – Predictive analytics  
+
+### 🌐 IoT Layer  
+- **Python** – Data collection  
+- **MQTT/HTTP** – Communication protocols  
+- **Sensor Integration** – Real-time data acquisition  
+
+---
+
+## 🚀 Getting Started  
+
+### Prerequisites  
+- Node.js (v18+)
 - npm or yarn
-- Google Maps API key (optional)
+- MongoDB Atlas account
+- Google Maps API key
 
-### Installation
-
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-2. **Configure Google Maps** (Optional):
-   - Get a Google Maps API key from Google Cloud Console
-   - Replace `YOUR_GOOGLE_MAPS_API_KEY` in `public/index.html`
-
-3. **Start the backend server**:
-   ```bash
-   # In a separate terminal, navigate to your backend folder
-   cd backend
-   node server.js
-   ```
-
-4. **Start the React development server**:
-   ```bash
-   npm start
-   ```
-
-5. **Open your browser**:
-   Navigate to `http://localhost:3000`
-
-## 🔧 Backend Integration
-
-The dashboard integrates with your Node.js backend running on port 4000. The backend should provide:
-
-### API Endpoints
-
-- `GET /api/sensors` - Retrieve all sensor data
-- `POST /api/sensors` - Add new sensor data
-- `GET /api/poles` - Get power pole locations and status (optional)
-
-### Data Format
-
-**Sensor Data**:
-```json
-{
-  "id": 1,
-  "voltage": 230.5,
-  "current": 12.3,
-  "vibration": 0.2,
-  "timestamp": "2025-01-11T07:00:00.000Z"
-}
+### 1️⃣ Clone the Repository  https://github.com/Swagat-1655/polm
+```bash
+git clone 
+cd power-line-monitoring
 ```
 
-**Pole Data**:
-```json
-{
-  "id": 1,
-  "lat": 40.7128,
-  "lng": -74.0060,
-  "status": "clear", // "clear", "warning", "fault"
-  "name": "Pole 1 - Location"
-}
+### 2️⃣ Install Dependencies  
+```bash
+# Install frontend dependencies
+cd frontend
+npm install
+
+# Install backend dependencies
+cd ../backend
+npm install
 ```
 
-## 🎨 Customization
+### 3️⃣ Environment Setup  
+Create `.env` files in both frontend and backend directories:
 
-### Color Theme
-The app uses a beautiful gradient theme that can be customized in `tailwind.config.js`:
-
-- **Deep Blue**: `#0F172A`
-- **Emerald Green**: `#059669`
-- **White**: `#FFFFFF`
-
-### Sensor Thresholds
-Modify alert thresholds in `AlertsAndPredictions.js`:
-
-```javascript
-// Voltage thresholds
-if (voltage < 210 || voltage > 245) // Critical
-if (voltage < 220 || voltage > 240) // Warning
-
-// Current thresholds  
-if (current > 16) // Critical
-if (current > 12) // Warning
-
-// Vibration thresholds
-if (vibration > 0.8) // Critical
-if (vibration > 0.5) // Warning
+**Frontend (.env)**
+```env
+VITE_API_BASE_URL=http://localhost:5000
+VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 ```
 
-## 🔍 Features Overview
+**Backend (.env)**
+```env
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
 
-### 1. Hero Section
-- 3D animated current flow visualization
-- Real-time current value display
-- Interactive 3D scene with orbit controls
+### 4️⃣ Run the Application  
 
-### 2. Sensor Monitoring
-- Live sensor cards with status indicators
-- Google Maps with color-coded status pins
-- Real-time data updates every 30 seconds
+#### Start Backend
+```bash
+cd backend
+npm start
+```
 
-### 3. Analytics Dashboard
-- Voltage vs Time chart
-- Current vs Time chart  
-- Fault Prediction Probability scatter plot
+#### Start Frontend (in a new terminal)
+```bash
+cd frontend
+npm run dev
+```
 
-### 4. Alert System
-- Real-time alerts based on sensor thresholds
-- Color-coded severity levels (Critical, Warning, Info)
-- Alert history with timestamps
+### 5️⃣ Access the Application  
+- Frontend: http://localhost:5173  
+- Backend API: http://localhost:5000  
 
-### 5. AI Predictions
-- Line break probability calculation
-- Maintenance priority recommendations
-- Estimated time to failure
-- Recommended actions list
-- AI confidence level indicator
+---
+
+## 📂 Project Structure  
+```yaml
+power-line-monitoring/
+  Frontend (React):
+    src/
+      components/    # Reusable UI components
+      pages/        # Application pages
+      store/        # Redux store
+      utils/        # Helper functions
+      App.jsx       # Main component
+      main.jsx      # Entry point
+    
+  Backend (Node.js):
+    controllers/    # Request handlers
+    models/         # Database models
+    routes/         # API routes
+    middleware/     # Authentication & validation
+    app.js          # Express app setup
+    server.js       # Server entry point
+    
+  AI_ML/           # Machine learning models
+  IoT/             # IoT sensor integration
+  docs/            # Documentation
+```
 
 ## 🚨 Mock Data
 
@@ -169,21 +151,6 @@ The dashboard is fully responsive and works on:
 - Desktop (1920x1080+)
 - Tablets (768px+)
 - Mobile devices (320px+)
-
-## 🔧 Development
-
-### Available Scripts
-
-- `npm start` - Start development server
-- `npm build` - Build for production
-- `npm test` - Run tests
-- `npm eject` - Eject from Create React App
-
-### Performance Tips
-
-- Charts update only with the last 10 data points for optimal performance
-- 3D animations use requestAnimationFrame for smooth rendering
-- Components are optimized with React.memo where appropriate
 
 ## 📄 License
 
@@ -203,4 +170,4 @@ For support or questions, please create an issue in the repository.
 
 ---
 
-**Built with ❤️ using React, Three.js, and modern web technologies**
+**Built with ❤️ by Team NEON NEXUS**
